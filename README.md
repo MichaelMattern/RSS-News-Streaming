@@ -1,4 +1,4 @@
-# News RSS Scraper
+# RSS Stream News Scraper
 
 Collect the latest business and markets headlines from a handful of hand‑picked RSS feeds and store them in a single compressed [Parquet](https://parquet.apache.org/) file for fast, column‑oriented analytics.
 
