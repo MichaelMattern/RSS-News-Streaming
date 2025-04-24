@@ -83,22 +83,6 @@ SOURCES = [
 
 ---
 
-## 🔍 Querying the Output (Examples)
-
-```python
-# Top publishers in the last 24 h
-(df[df.timestamp > (pd.Timestamp.utcnow() - pd.Timedelta('1D')).isoformat()]
-   .groupby('source').size().sort_values(ascending=False).head())
-```
-
-```python
-# Search headlines for a ticker symbol
-mask = df.title.str.contains(r"\bMSFT\b", case=False, regex=True)
-print(df.loc[mask, ["timestamp", "title", "url"]])
-```
-
----
-
 ## 🏎️ Performance Tweaks
 
 | Parameter           | Where                                 | Why you might change it                                                                  |
